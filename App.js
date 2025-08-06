@@ -27,6 +27,7 @@ const swimVerdict = getSwimVerdict(weatherData);
   };
 
   return (
+    <Text style={styles.swimVerdict}>{swimVerdict}</Text>
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>WeatherWise: RadarRogue Edition 🌦️</Text>
       <View style={styles.buttonContainer}>
