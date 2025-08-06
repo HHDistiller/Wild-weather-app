@@ -1,9 +1,18 @@
 import React, { useState } from 'react';
 import { View, Text, Button, StyleSheet, SafeAreaView } from 'react-native';
+import { getSwimVerdict } from './swimMode';
 
 export default function App() {
   const [mode, setMode] = useState('DramaCast');
+const weatherData = {
+  precipIntensity: 0.2,
+  uvIndex: 7,
+  windSpeed: 5,
+  airTemp: 82,
+};
 
+const swimVerdict = getSwimVerdict(weatherData);
+  
   const getForecastMessage = () => {
     switch (mode) {
       case 'DramaCast':
