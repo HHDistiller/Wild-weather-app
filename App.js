@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { View, Text, Button, StyleSheet, SafeAreaView } from 'react-native';
 import { getSwimVerdict } from './swimMode';
+import SwimPanel from './SwimPanel';
 
+// inside your return JSX:
+<SwimPanel verdict={swimVerdict} />
 export default function App() {
   const [mode, setMode] = useState('DramaCast');
 const weatherData = {
